@@ -22,6 +22,7 @@ function Home() {
                     </div>
                     <div className="api-div">
                         <API />
+                        <input></input> 
                     </div>
 
                 </div>
@@ -31,3 +32,5 @@ function Home() {
 }
 
 export default Home;
+
+//add input box later
