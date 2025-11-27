@@ -1,4 +1,5 @@
-import UseEffect from '../components/UseEffect.jsx';
+import UseEffect from "../components/UseEffect.jsx";
+import API from "../components/API.jsx";
 
 function Home() {
 
@@ -7,6 +8,7 @@ function Home() {
 
             <p>Minigame</p>
             <UseEffect />
+            <API />
 
         </div>
     )
