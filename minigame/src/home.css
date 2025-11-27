@@ -15,10 +15,13 @@
 }
 
 .score-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     position: absolute;
     top: 20px; 
     right: 20px;
-    min-height: 50px;
+    max-height: 50px;
     min-width: 170px;
     background-color: #F0E491;
     border: 6px solid #31694E;
@@ -28,10 +31,8 @@
 }
 
 .score {
-    display: flex;
-    align-self: flex-start;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 400;
+    font-weight: bold;
     font-size: 25px;
     color: black;
 }
@@ -62,7 +63,6 @@
 
 .title {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 400;
     font-size: 35px;
     color: black;
     margin-top: 50px;
@@ -71,7 +71,7 @@
 
 .p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 100;
+    font-weight: normal;
     font-size: 20px;
     color: #31694E;
     margin-top: 10px;
@@ -84,6 +84,10 @@
 
 .s {
     font-size: 15px;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 .api-div {
@@ -103,7 +107,7 @@
     min-height: 50px;
     width: 200px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 100;
+    font-weight: normal;
     font-size: 13px;
     background-color: #BBC863;
     padding: 5px;

@@ -16,8 +16,8 @@ function Home() {
                 <div className="home-div f">
 
                     <div className="text-box f">
-                        <h1 className="title">Agify</h1>
-                        <p className="p b">Guess the typical age of people with a specific name</p>
+                        <h1 className="title bold">Agify</h1>
+                        <p className="p b bold">Guess the typical age of people with a specific name</p>
                         <p className="p s">You get one point for each correct guess<br/><br/>You can guess up to 5 years younger or older than the persons age<br/>and still score a point</p>
                     </div>
                     <div className="api-div">
