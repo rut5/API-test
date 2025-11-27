@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from "react";
-import Navbar from './navbar.jsx';
-import Home from './pages/home.jsx';
+import Navbar from "./navbar.jsx";
+import Home from "./pages/home.jsx";
+import "./home.css"
 
 function App() {
 

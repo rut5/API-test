@@ -15,21 +15,27 @@ function API() {
         };
     };
 
+    // hur kan jag lägga till fler namn och sen randomisera dessa?
+
     //useEffect(() => {fetchData();}, [])
 
-    const generateFact = () => {
-        fetchData();
+    const generateName = () => {
+        fetchData(fact.name);
     }
 
-    return(
+    const displayAge = () => {
+        fetchData(fact.age);
+    }
+
+    return (
         <div>
 
-        <h1>API</h1>
-        <button onClick={generateFact}>Generate random name</button>
-        <p> Name: {fact.name} </p>
-        <p> Age: {fact.age} </p>
+            <button onClick={generateName} className="btn b">Generate random name</button>
+            <p className="p b s"> Name: {fact.name} </p>
+            <button onClick={displayAge} className="btn b">Reveal typical age</button>
+            <p className="p b s"> Age: {fact.age} </p>
 
-        </div>
+        </div> // hur gör jag så inte båda visas när man klickar på generate name
     );
 };
 
