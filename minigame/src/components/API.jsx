@@ -3,12 +3,14 @@ import React, { useEffect, useState } from "react";
 function API(props) {
 
     const [fact, setFact] = useState([]);
+    const [showAge, setShowAge] = useState(false); //n
 
     const fetchData = async () => {
         try {
             const response = await fetch(`https://api.agify.io/?name=${inputName}`)
             const data = await response.json();
             setFact(data);
+            setShowAge(false);
         }
         catch (error) {
             console.log("Error fetching data:", error);
@@ -23,17 +25,22 @@ function API(props) {
 
     const enterName = () => {
         fetchData();
-    } //n
+    } 
 
     const displayAge = () => {
-        fetchData(fact.age);
+        setShowAge(true);
     }
 
     return (
         <div>
 
+            <button onClick={enterName} className="btn b">Enter name
+            </button>
+
             <p className="p b s"> Name: {fact.name} </p>
-            <button onClick={enterName} className="btn b">Enter name</button>
+
+            <button onClick={displayAge} className="btn b">Reveal Age</button>
+
             <p className="p b s"> Age: {fact.age} </p>
 
         </div>
