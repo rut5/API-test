@@ -40,7 +40,9 @@ function Home() {
                             onChange={handleName}
                             placeholder="Type a name"
                         />
-                        <API name={inputName}/>
+                        <API 
+                        name={inputName}
+                        age={inputAge}/>
                         <input className="input-age"
                             type="number"
                             value={inputAge}

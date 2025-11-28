@@ -1,17 +1,12 @@
 import Home from "../pages/home.jsx";
-import API from "/API.jsx";
+import API from "./API.jsx";
 
-let score = 0;
+function updateScore({ inputAge, factAge, score, setScore}) {
 
-function updateScore () {
-
-
-    if ({inputAge} === {fact.age}) {
-        score++;
-    }
-
-    return (
-
-    );
+  if (inputAge === factAge) {
+    setScore (prevScore => prevScore +1);
+  };
 
 };
+
+export default updateScore;
