@@ -1,5 +1,6 @@
 // import UseEffect from "../components/UseEffect.jsx";
 import API from "../components/API.jsx";
+// import Score from "../components/score.jsx";
 import "../home.css";
 import {useState} from "react";
 
@@ -21,7 +22,7 @@ function Home() {
         <div>
 
             <div className="score-container">
-                <p className="score">Score: <span id="score">{currentScore}</span></p>
+                <p className="score">Score: <span id="score">0</span></p>
             </div>
 
             <div className="container f">
@@ -56,5 +57,3 @@ function Home() {
 }
 
 export default Home;
-
-//add input box för namn (först) och ålder

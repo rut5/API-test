@@ -19,8 +19,6 @@ function API(props) {
 
     const inputName = props.name;
 
-    // skapa ny UseState variabel som kopplas till target value i input
-
     //useEffect(() => {fetchData();}, [])
 
     const enterName = () => {
