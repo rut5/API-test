@@ -6,9 +6,14 @@ import {useState} from "react";
 function Home() {
 
     const [inputName, setInputName] = useState(''); 
+    const [inputAge, setInputAge] = useState('');
 
-    const handleChange = (event) => {
+    const handleName = (event) => {
         setInputName(event.target.value);
+    };
+
+    const handleAge = (event) => {
+        setInputAge(event.target.value);
     };
 
     return (
@@ -31,10 +36,16 @@ function Home() {
                         <input className="input-name"
                             type="text"
                             value={inputName}
-                            onChange={handleChange}
+                            onChange={handleName}
                             placeholder="Type a name"
                         />
                         <API name={inputName}/>
+                        <input className="input-age"
+                            type="number"
+                            value={inputAge}
+                            onChange={handleAge}
+                            placeholder="Guess age"
+                        />
                     </div>
 
                 </div>

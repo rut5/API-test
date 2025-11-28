@@ -25,7 +25,7 @@ function API(props) {
 
     const enterName = () => {
         fetchData();
-    } 
+    }
 
     const displayAge = () => {
         setShowAge(true);
@@ -41,7 +41,12 @@ function API(props) {
 
             <button onClick={displayAge} className="btn b">Reveal Age</button>
 
-            <p className="p b s"> Age: {fact.age} </p>
+            <p className="p b s">
+                Age: 
+                {showAge && fact.age && (
+                    <span className="age-value">{' '}{fact.age}</span>
+                )}
+            </p>
 
         </div>
     );
@@ -51,3 +56,4 @@ export default API;
 
 // in try {} we store our api url
 // <button onClick={generateName} className="btn b">Generate random name</button>
+// <p className="p b s"> Age: {fact.age} </p>
