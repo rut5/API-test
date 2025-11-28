@@ -103,6 +103,11 @@
     text-transform: uppercase;
 }
 
+.input-name {
+    min-height: 20px;
+    max-width: 200px;
+}
+
 .btn {
     min-height: 50px;
     width: 200px;

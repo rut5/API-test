@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-function API() {
+function API(props) {
 
     const [fact, setFact] = useState([]);
 
     const fetchData = async () => {
         try {
-            const response = await fetch("https://api.agify.io/?name=meelad")
+            const response = await fetch(`https://api.agify.io/?name=${inputName}`)
             const data = await response.json();
             setFact(data);
         }
@@ -15,13 +15,15 @@ function API() {
         };
     };
 
-    // hur kan jag lägga till fler namn och sen randomisera dessa?
+    const inputName = props.name;
+
+    // skapa ny UseState variabel som kopplas till target value i input
 
     //useEffect(() => {fetchData();}, [])
 
-    const generateName = () => {
-        fetchData(fact.name);
-    }
+    const enterName = () => {
+        fetchData();
+    } //n
 
     const displayAge = () => {
         fetchData(fact.age);
@@ -30,15 +32,15 @@ function API() {
     return (
         <div>
 
-            <button onClick={generateName} className="btn b">Generate random name</button>
             <p className="p b s"> Name: {fact.name} </p>
-            <button onClick={displayAge} className="btn b">Reveal typical age</button>
+            <button onClick={enterName} className="btn b">Enter name</button>
             <p className="p b s"> Age: {fact.age} </p>
 
-        </div> // hur gör jag så inte båda visas när man klickar på generate name
+        </div>
     );
 };
 
 export default API;
 
 // in try {} we store our api url
+// <button onClick={generateName} className="btn b">Generate random name</button>
