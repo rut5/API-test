@@ -21,7 +21,7 @@ function Home() {
         <div>
 
             <div className="score-container">
-                <p className="score">Score: </p>
+                <p className="score">Score: <span id="score">{currentScore}</span></p>
             </div>
 
             <div className="container f">

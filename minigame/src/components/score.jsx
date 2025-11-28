@@ -1,11 +1,17 @@
 import Home from "../pages/home.jsx";
 import API from "/API.jsx";
 
-function Score() {
+let score = 0;
 
-    if inputAge === fact.age 
+function updateScore () {
+
+
+    if ({inputAge} === {fact.age}) {
+        score++;
+    }
 
     return (
 
     );
+
 };
