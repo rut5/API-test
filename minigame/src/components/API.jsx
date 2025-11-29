@@ -3,7 +3,14 @@ import React, { useEffect, useState } from "react";
 function API(props) {
 
     const [fact, setFact] = useState([]);
-    const [showAge, setShowAge] = useState(false); //n
+    const [showAge, setShowAge] = useState(false);
+    const {
+        name,
+        inputAge,
+        score,
+        setScore,
+        updateScore
+    } = props; // not sure about these props
 
     const fetchData = async () => {
         try {
@@ -28,6 +35,10 @@ function API(props) {
     const displayAge = () => {
         setShowAge(true);
     }
+
+        if (fact && fact.age && inputAge) {
+            updateScore(inputAge, fact.age, score, setScore); 
+        }
 
     return (
         <div>

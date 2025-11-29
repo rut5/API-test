@@ -1,11 +1,11 @@
-// import UseEffect from "../components/UseEffect.jsx";
 import API from "../components/API.jsx";
-// import Score from "../components/score.jsx";
+import updateScore from "../components/score.jsx"; 
 import "../home.css";
 import {useState} from "react";
 
 function Home() {
 
+    const [score, setScore] = useState(0); // n
     const [inputName, setInputName] = useState(''); 
     const [inputAge, setInputAge] = useState('');
 
@@ -22,7 +22,7 @@ function Home() {
         <div>
 
             <div className="score-container">
-                <p className="score">Score: <span id="score">0</span></p>
+                <p className="score">Score: <span id="score">{score}</span></p>
             </div>
 
             <div className="container f">
@@ -40,15 +40,19 @@ function Home() {
                             onChange={handleName}
                             placeholder="Type a name"
                         />
-                        <API 
-                        name={inputName}
-                        age={inputAge}/>
                         <input className="input-age"
                             type="number"
                             value={inputAge}
                             onChange={handleAge}
                             placeholder="Guess age"
                         />
+                        <API 
+                        name={inputName}
+                        age={inputAge}
+                        score={score}
+                        setScore={setScore}
+                        updateScore={updateScore}
+                        /> 
                     </div>
 
                 </div>
