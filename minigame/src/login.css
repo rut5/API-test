@@ -1,0 +1,58 @@
+.reg-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 100vh;
+}
+
+.title {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: black;
+}
+
+.reg-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+} 
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+.i-1 {
+    margin-bottom: 10px;
+}
+
+.b-1 {
+    margin-bottom: 10px;
+}
+
+
+/* dont think these are needed 
+
+.user-list {
+    display: none;
+}
+
+.list-item {
+    display: none;
+}
+
+.li::marker {
+    display: none;
+} */

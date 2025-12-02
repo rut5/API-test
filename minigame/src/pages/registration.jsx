@@ -5,6 +5,7 @@
 
 import React from "react";
 import { useState, useEffect } from "react";
+import "../login.css";
 
 function Registration() {
 
@@ -16,24 +17,34 @@ function Registration() {
         setSearch('');
         setList((l) => [...l, localStorage.getItem('username')]); // spread operator
     };
+
+    const clearList = () => {
+        localStorage.clear();
+    };
+
     useEffect(() => {
         setList([localStorage.getItem('username')]);
     }, []); // only runs once, renders the key value pairs in local storage
 
     return (
-        <div>
-            <h1>Registration</h1>
+        <div className="reg-page">
+            <h1 className="title">Registration</h1>
             <br />
 
             <div className="reg-form">
-                <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Username" />
-                <input type="password" placeholder="Password" />
-                <button onClick={addUser}>Register</button>
+                <div className="inputs">
+                    <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Username" className ="i-1"/>
+                    <input type="password" placeholder="Password" />
+                </div>
+                <div className="buttons">
+                    <button onClick={addUser} className="b-1">Register</button>
+                    <button onClick={clearList}>Clear</button>
+                </div>
 
                 {/* adds a list */}
-                <ul>
+                <ul className="user-list">
                     {list.map((item, index) => (
-                        <li key={index}>{item}</li>
+                        <li key={index} className="list-item">{item}</li>
                     ))}
                 </ul>
             </div>
