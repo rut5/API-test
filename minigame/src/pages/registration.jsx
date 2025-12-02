@@ -40,10 +40,12 @@ function Registration() {
         localStorage.setItem('userUsername', username);
         localStorage.setItem('userPassword', password);
 
-        navigate('/login'); // redirect to login page after registration
+        navigate('/login');
     };
 
     const clearList = () => {
+        setUsername('');
+        setPassword('');
         localStorage.removeItem("userUsername");
         localStorage.removeItem("userPassword");
     };

@@ -15,9 +15,9 @@ function Login() {
     const navigate = useNavigate();
 
     const clearList = () => {
-        localStorage.removeItem("userUsername");
-        localStorage.removeItem("userPassword");
-    }; // detta är redan i reg-page
+        setUsername('');
+        setPassword('');
+    }; // detta är nästan samma som i reg-page, men jag tar inte bort localstorage items här för det kändes konstigt 
 
     const logIn = () => {
         setErrorMessage("");
@@ -37,7 +37,7 @@ function Login() {
 
         if (username === registeredUsername && password === registeredPassword) {
             setErrorMessage("Login successful!");
-            navigate('/home'); // Redirect to home page
+            navigate('/home');
         } else {
             setErrorMessage("Invalid username or password.");
         }
@@ -57,7 +57,7 @@ function Login() {
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
                         placeholder="Username"
-                        className="margin-b" /> {/* i think this shouldnt set username or password, since its the login */}
+                        className="margin-b" />
 
                     <input
                         type="password"
