@@ -46,7 +46,6 @@ function Registration() {
     const clearList = () => {
         localStorage.removeItem("userUsername");
         localStorage.removeItem("userPassword");
-        setErrorMessage("Stored credentials cleared from local storage.");
     };
 
     return (
@@ -87,7 +86,6 @@ function Registration() {
                 )}
 
             </div>
-            <br />
 
         </div>
     );
